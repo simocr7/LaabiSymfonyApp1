@@ -1,0 +1,41 @@
+{% extends "simoprojetBundle:bonoboViews:layout.html.twig" %}
+ {% block simo %}
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Laabi: Login Form</title>
+</head>
+
+<body style="background-color: #D3D3D3">
+    <div style="color:black;margin-left: 70px;margin-top: 40px;font-size:xx-large"align ="center">
+    <table>
+        <tr>
+            <th><img src="{{asset('bundles/simoprojet/images/wel.png')}}"></th>
+            <th><h1> Bienvenue dans notre espace<h1></th>
+            <th><img src="{{asset('bundles/simoprojet/images/wel.png')}}"></th>
+           </tr>
+    </table>
+    </div>
+    <div class="wrapper"style="margin-top: 10px;margin-bottom: 10px;margin-left: 520px;">
+    <form class="form-signin" method="POST" action="SuppFormAction">   
+         <table>
+             <tr>
+             <tr>
+              <td><img src="{{asset('bundles/simoprojet/images/goo.png')}}"></td>
+              <td> <a href="{{ path('list')}} "> <h2 style="background-color: #A9A9A9;color: black;">Afficher mes informations</h2></a></td>
+             </tr>
+              <tr>
+              <td><img src="{{asset('bundles/simoprojet/images/goo.png')}}"></td>
+              <td> <a href="{{ path('add')}} "> <h2 align="center"style="background-color: #A9A9A9;color:black;">Ajouter un bonobo de sa liste</h2></a></td>
+              </tr>
+          
+             
+          </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html> 
+{% endblock %}
+     

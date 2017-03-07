@@ -1,0 +1,54 @@
+{% extends "simoprojetBundle:bonoboViews:layout.html.twig" %}
+ {% block simo %}
+        <style>
+table, th, td {
+    border: 9px solid black;align-content: center;
+}
+th{
+    color: blue;font-size: large; 
+}
+td{
+    
+}
+body{
+    background-color: #D3D3D3;
+}
+table{
+    width: 95%;
+}
+</style>
+     <div align="center" style="font-size: xx-large;color:black;margin-top:10px;margin-bottom:2px;">
+    {{ form_start(f) }}
+    <table align="center" style="width: 250px;border-color: #CD5C5C;color:black;">
+      <tr>
+            <td style="font-size: large;width: 250px;">{{ form_label(f.age)}}</td>
+            <td>{{ form_widget(f.age)}}</td>
+            <td>{{ form_errors(f.age)}}</td>
+        </tr>
+          
+         <tr>
+            <td style="font-size: large;width: 250px">{{ form_label(f.famille)}}</td>
+            <td>{{ form_widget(f.famille)}}</td>
+            <td>{{ form_errors(f.famille)}}</td>
+        </tr>
+        
+        <tr>
+            <td style="font-size: large;">{{ form_label(f.race)}}</td>
+            <td>{{ form_widget(f.race)}}</td>
+            <td>{{ form_errors(f.race)}}</td>
+        </tr>
+          <tr>
+            <td style="font-size: large;">{{ form_label(f.nourriture)}}</td>
+            <td>{{ form_widget(f.nourriture)}}</td>
+            <td>{{ form_errors(f.nourriture)}}</td>
+        </tr>
+        <tr>
+        <td style="font-size: large;margin-left:180px; color: red;">{{ form_label(f.Supprimer)}}</td>
+        </tr>
+        </table>
+             {{ form_end(f) }}
+              </div>
+             </br></br></br>   
+             {%endblock%}
+     
+          

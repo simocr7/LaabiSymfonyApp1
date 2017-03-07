@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" type="text/css" href="{{asset('bundles/simoprojet/css/css/bootstrap.min.css')}}"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,300" />
+	<link rel="stylesheet" type="text/css" href="{{asset('bundles/simoprojet/css/css/style.css')}}" />
+        <meta charset="utf-8" />
+        <title>laabi test</title>
+  </head>
+  
+    <body>
+	 <header class="container-fluid header">
+	  <div class="container">
+	   <a href="#"class="logo">Laabi</a>
+	    <nav class="menu">
+		 <a href="{{path('mo')}}">Acceuil</a>
+		 <a href="#about">A propos</a>
+		 <a href="#portfolio">Style de vie</a>
+		 <a href="#contact">Contact</a>
+		 <a href="{{path('login')}}">Login</a>
+		</nav>
+	  </div>
+	 </header>
+	{% block simo %}
+	 <section class="container-fluid banner">
+	  <div class="ban">
+	   <img src="{{asset('bundles/simoprojet/images/photo/bonobo.jpg')}}"alt="baniére du site"/>
+	  </div>
+	   <div class="inner-banner">
+	   <h1>Bienvenue dans notre monde</h1>
+           <a href="#contact">Contactez Nous</a>
+	  </div>
+	 </section>
+
+	  <section class="container-fluid about">
+	  <div class="container">
+	  <h2 id="about">A propos de nous</h2>
+	  <hr class="separat">
+	    <div class="row">
+	      <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+		      <h2>Découverte</h2>
+		             <p>Le Bonobo,Chimpanzé nain ou Chimpanzé pygmée est une espèce de Panines,membres de la famille des hominidés et de l'ordre des primates. Il se distingue notamment du chimpanzé commun par une face foncée plutôt que claire.</p>
+		  </article>
+		   <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+		      <h2>Description</h2>
+		             <p>Le mâle mesure environ 1,19 m pour un poids allant de 37 à 61 kg (45 kg en moyenne). La femelle mesure 1,11 m pour un poids allant de 27 à 38 kg (33,2 kg en moyenne). Le dimorphisme sexuel est moins prononcé que chez la plupart des primates</p>
+		  </article>
+		   <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+		      <h2>Intelligence</h2>
+		             <p> l'utilisation de 348 symboles d'un clavier. Les symboles se réfèrent aux objets familiers des activités favorites et même quelques concepts considérés assez abstrait.Le bonobo,nommé Kanzi,a appris à combiner ces symboles dans ce que les linguistes appellent une «proto-grammaire».</p>
+		  </article>
+	  </div>
+	 
+	 </section>
+	 
+	 <section class="container-fluid portfolio">
+	   <div class="container">
+	     <h2 id="portfolio">Notre Style de vie</h2>
+		   <hr class="separat">
+		   <div class="show">
+	      <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12 item-folio">
+		     <img src="{{asset('bundles/simoprojet/images/photo/bon3.jpg')}}"alt="baniére du site"style="width:365px;height:365px;"/>
+		  </article>
+		  
+		  <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12 item-folio">
+		     <img src="{{asset('bundles/simoprojet/images/photo/bon2.jpg')}}"alt="baniére du site"style="width:365px;height:365px;"/>
+		  </article>
+		  
+		  <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12 item-folio">
+		     <img src="{{asset('bundles/simoprojet/images/photo/bon1.jpg')}}"alt="baniére du site" style="width:365px;height:365px;"/>
+		  </article>
+          </div>
+	 </section>
+                     {%endblock%}
+	 <footer class="container-fluid footer">
+	 <style>
+    body    {
+             background-image: url('http://www.icanread.asia/uploads/homepage/2013/09/22/112_o_background.jpg');      
+             background-repeat: no-repeat;
+            }
+</style>
+	  <div class="container">
+	   <h2 id="contact">A Votre Service 24h/24</h2>
+		   <hr class="separat">
+            <div class="row">
+                <div class="col-sm-6 col-centered"id="mee">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" >
+                            <h1>Contact Us</h1>
+                        </div>
+                    <form action="" method="POST" >
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user blue"></i></span>
+                                <input type="text" name="InputName" placeholder="Name" class="form-control" autofocus="autofocus" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope blue"></i></span>
+                                <input type="email" name="InputEmail" placeholder="Email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone blue"></i></span>
+                                <input type="number" name="InputCno" placeholder="Phone" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-comment blue"></i></span>
+                                <textarea name="InputMessage" rows="6" class="form-control" type="text" required></textarea>
+                            </div>
+                        </div>
+                        <div class="">
+                        <button type="submit" class="btn btn-info pull-right">Send <span class="glyphicon glyphicon-send"></span></button>
+                            <button type="reset" value="Reset" name="reset" class="btn">Reset <span class="glyphicon glyphicon-refresh"></span></button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+	<p>
+	 Réalisé par M.Mohamed Laabi</br>
+	 Copyright Holder All rights Reserved.
+	</p>
+	 </footer>
+	 

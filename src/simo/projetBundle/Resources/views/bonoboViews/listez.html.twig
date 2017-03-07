@@ -1,0 +1,55 @@
+{% extends "simoprojetBundle:bonoboViews:layout.html.twig" %}
+ {% block simo %}
+    <html>
+    <head>
+   <style>
+table, th, td {
+    border: 9px solid black;align-content: center;
+}
+th{
+    color: blue;font-size: large; 
+}
+td{
+    
+}
+body{
+    background-color: #D3D3D3;
+}
+table{
+    width: 95%;
+}
+</style>
+</head>
+<body>
+    <div style="margin-top: 30px;margin-bottom: 30px;margin-left: 30px;">
+        <table width="60%" align="center" border="9">
+        <tr>
+            <th>ID</th>
+            <th>Age</th>
+            <th>Famille</th>
+            <th>Race</th>
+            <th>Nourriture</th>
+            <th></th>
+            <th></th>
+        </tr>
+        
+      {% for s in bonobo  %}
+            
+          <tr style="color:bonobo ">
+                <td>{{s.id}}</td>
+                <td>{{s.age}}</td>
+                <td>{{s.famille}}</td>
+                <td>{{s.race}}</td>
+                <td>{{s.nourriture}}</td>
+                <td><a href="{{path('delete',{'id':s.id})}}"><h4 style="color:blue">Supprimer</h4></a></td>
+                <td><a href="{{path('update',{'id':s.id})}}"><h4 style="color:blue">Modifier</h4></a></td>
+            
+       {% endfor   %}
+       
+    </table>
+    </div>
+    </body>
+    </html>
+    
+    {%endblock%}
+    
